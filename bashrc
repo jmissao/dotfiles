@@ -1,0 +1,24 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+export EDITOR=vim
+export LANG="en_US.UTF-8"
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+PS1='\[\e[1;36m\][\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
+
+alias ls='ls --color=auto'
+alias rm="rm -iv"
+alias cp="cp -iv"
+alias mv="mv -iv"
+
+set -o vi
+shopt -s autocd
+shopt -s checkjobs
+shopt -s checkwinsize

@@ -1,0 +1,11 @@
+[core]
+	excludesfile = /home/jmissao/.gitignore
+[user]
+	name = Julio Missao
+	email = julio.missao@gmail.com
+[color]
+	ui = auto
+[pack]
+	threads = 0
+[diff]
+	renamelimit = 0
