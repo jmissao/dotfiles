@@ -18,3 +18,4 @@ URxvt*scrollBar_right:false
 URxvt*scrollstyle:rxvt
 URxvt.inputMethod: ibus
 URxvt.preeditType: OnTheSpot,None
+URxvt*termName: rxvt
