@@ -22,3 +22,5 @@ set -o vi
 shopt -s autocd
 shopt -s checkjobs
 shopt -s checkwinsize
+GPG_TTY=`tty`
+export GPG_TTY
