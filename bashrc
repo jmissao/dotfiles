@@ -7,9 +7,9 @@
 
 export EDITOR=vim
 export LANG="en_US.UTF-8"
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=uim
+export XMODIFIERS=@im=uim
+export QT_IM_MODULE=uim
 
 PS1='\[\e[1;36m\][\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
 
