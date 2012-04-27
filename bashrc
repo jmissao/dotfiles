@@ -11,7 +11,7 @@ export GTK_IM_MODULE=uim
 export XMODIFIERS=@im=uim
 export QT_IM_MODULE=uim
 
-PS1='\[\e[1;36m\][\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
+PS1='\[\e[1;36m\][\t.\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
 
 alias ls='ls --color=auto'
 alias rm="rm -iv"
