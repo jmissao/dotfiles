@@ -10,8 +10,9 @@ export LANG="en_US.UTF-8"
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+export npm_config_prefix=~/.node_modules
 
-PS1='\[\e[1;36m\][\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
+PS1='\[\e[1;36m\][\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\]'
 
 alias ls='ls --color=auto'
 alias rm="rm -iv"
@@ -22,3 +23,10 @@ set -o vi
 shopt -s autocd
 shopt -s checkjobs
 shopt -s checkwinsize
+
+stty -ixon
+
+PATH="$PATH:$HOME/bin:$HOME/go/bin"
+
+HISTSIZE=
+HISTFILESIZE=

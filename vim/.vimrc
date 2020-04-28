@@ -189,6 +189,9 @@ endif
 :set shiftwidth=4
 :set tabstop=4
 :set number
+:set relativenumber
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+:set list
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 :inoremap ( ()<Esc>:let leavechar=")"<CR>i
@@ -220,3 +223,31 @@ map ,rl :!pdflatex %
 :inoremap ,.fr \frac{}{}<Esc>hhi
 :inoremap ,.mp2 \begin{table}[ht]<CR><Space><Space>\begin{minipage}[b]{.48\linewidth}<CR>\end{minipage}<CR>\begin{minipage}[b]{.48\linewidth}<CR>\end{minipage}<CR><Esc>2dhi\end{table}<Esc>kkkko<Space><Space>
 :inoremap ,.mp3 \begin{table}[ht]<CR><Space><Space>\begin{minipage}[b]{.3\linewidth}<CR>\end{minipage}<CR>\begin{minipage}[b]{.3\linewidth}<CR>\end{minipage}<CR>\begin{minipage}[b]{.3\linewidth}<CR>\end{minipage}<CR><Esc>2dhi\end{table}<Esc>kkkkkko<Space><Space>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                            \ 'active_filetypes': ['python', 'javascript'],
+                            \ 'passive_filetypes': [] }
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+nmap =j :%!python -m json.tool<CR>
+
+function Py2()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
+endfunction
+
+function Py3()
+  let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+endfunction
+
+call Py2()
+
+let g:netrw_preview = 1
