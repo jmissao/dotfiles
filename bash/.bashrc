@@ -25,4 +25,10 @@ shopt -s checkwinsize
 GPG_TTY=`tty`
 export GPG_TTY
 
-export PATH="/home/jmissao/bin:$PATH"
+
+stty -ixon
+
+PATH="$PATH:$HOME/bin:$HOME/go/bin"
+
+HISTSIZE=
+HISTFILESIZE=
