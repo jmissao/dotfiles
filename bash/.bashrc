@@ -11,7 +11,18 @@ export GTK_IM_MODULE=uim
 export XMODIFIERS=@im=uim
 export QT_IM_MODULE=uim
 
-PS1='\[\e[1;36m\][\t.\[\e[0;37m\]\u@\h \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\] '
+GIT_PROMPT=/usr/share/git/git-prompt.sh
+if [ -f "$GIT_PROMPT" ]
+then
+    GIT_PS1_SHOWCOLORHINTS=1
+    GIT_PS1_SHOWDIRTYSTATE=1
+    GIT_PS1_SHOWUNTRACKEDFILES=1
+    GIT_PS1_SHOWUPSTREAM=1
+    source $GIT_PROMPT
+    PS1='\[\e[1;36m\][\t.\[\e[0;37m\]\u@カーミット空間 \w\[\e[1;36m\]$(__git_ps1 " %s")] \[\e[1;36m\]\$ \[\e[1;37m\]'
+else
+    PS1='\[\e[1;36m\][\t.\[\e[0;37m\]\u@カーミット空間 \w\[\e[1;36m\]] \[\e[1;36m\]\$ \[\e[1;37m\]'
+fi
 
 alias ls='ls --color=auto'
 alias rm="rm -iv"
