@@ -44,7 +44,7 @@ PATH="$PATH:$HOME/bin:$HOME/go/bin"
 HISTSIZE=
 HISTFILESIZE=
 
-if [ -f "~/.z.sh" ]
+if [ -f "$HOME/.z.sh" ]
 then
     source ~/.z.sh
 fi
