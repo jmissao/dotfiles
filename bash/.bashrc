@@ -33,16 +33,19 @@ set -o vi
 shopt -s autocd
 shopt -s checkjobs
 shopt -s checkwinsize
+shopt -s histappend
 GPG_TTY=`tty`
 export GPG_TTY
 
 
 stty -ixon
 
-PATH="$PATH:$HOME/bin:$HOME/go/bin"
+export PATH="$PATH:$HOME/bin:$HOME/go/bin"
 
-HISTSIZE=
-HISTFILESIZE=
+export HISTSIZE=
+export HISTFILESIZE=
+export PROMPT_COMMAND='history -a'
+export HISTCONTROL=ignoreboth
 
 if [ -f "$HOME/.z.sh" ]
 then
